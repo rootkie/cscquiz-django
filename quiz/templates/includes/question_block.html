@@ -1,0 +1,56 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <a href="{% url 'index' %}" class="panel-title"><h3 class="panel-title">Question {{qn_id}}: </h3></a>
+    </div>
+    <div class="panel-body">
+    	<form action="{% url 'answer' qn_id%}" method="POST" id="question-form">
+			<h1>{{qn.question_text}} </h1>
+            
+            <fieldset class="form-group">
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <h2>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="1">
+                    A:{{qn.option1}} 
+                    </h2>
+                  </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <h2>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="2">
+                    B:{{qn.option2}}
+                    </h2>
+                </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <h2>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="3">
+                    C:{{qn.option3}}
+                    </h2>
+                </label>
+                </div>
+                <div class="form-check">
+                <label class="form-check-label">
+                    <h2>
+                    <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios4" value="4">
+                    D:{{qn.option4}}
+                    </h2>
+                </label>
+                </div>
+                {% csrf_token %}
+                <button class="btn btn-primary" type="button" id="submit-answer-btn">Submit Answer</button>
+            </fieldset>
+    	</form>
+    </div>
+</div>
+
+<script>
+    var urlSubmit = "{% url 'answer' qn_id%}"
+    var _token = "{{ csrf_token }}"
+    var qnid = {{ qn.id }}
+    window.onbeforeunload = function() {
+        return true;
+    }
+</script>

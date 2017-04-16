@@ -1,0 +1,74 @@
+{% if message is not defined %}
+<div class='alert alert-info'>{{ message }}</div>
+{% endif %}
+
+<style>
+a.questions{
+  color:black;
+  text-decoration: none;
+}
+
+.img-thumbnail {
+  max-height: 60px;
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+}
+td{
+  height: 120px;
+}
+a:hover{
+  color: red;
+}
+
+
+</style>
+<table class="table"> 
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1">
+  <a href="/1" class="questions"><h2>附加1</h2></a>
+  <img src="{{ scores.0.answered_correct_by }}" class='img-responsive img-thumbnail'>
+  </td>
+  <td class="bg-primary text-center col-sm-2"><a href="/2" class="questions"><h2>附加2</h2></a><img src="{{ scores.1.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2"><a href="/3" class="questions"><h2>附加3</h2></a><img src="{{ scores.2.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2"><a href="/4" class="questions"><h2>附加4</h2></a><img src="{{ scores.3.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2"><a href="/5" class="questions"><h2>附加5</h2></a><img src="{{ scores.4.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1"><a href="/6" class="questions"><h2>1</h2></a><img src="{{ scores.5.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-primary text-center col-sm-2 col-sm-offset-1"><a href="/7" class="questions"><h2>2</h2></a><img src="{{ scores.6.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2 col-sm-offset-1"><a href="/8" class="questions"><h2>3</h2></a><img src="{{ scores.7.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2 col-sm-offset-1"><a href="/9" class="questions"><h2>4</h2></a><img src="{{ scores.8.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2 col-sm-offset-1"><a href="/10" class="questions"><h2>5</h2></a><img src="{{ scores.9.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1"><a href="/11" class="questions"><h2>6</h2></a><img src="{{ scores.10.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-primary text-center col-sm-2 col-sm-offset-1"><a href="/12" class="questions"><h2>7</h2></a><img src="{{ scores.11.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2 col-sm-offset-1"><a href="/13" class="questions"><h2>8</h2></a><img src="{{ scores.12.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2 col-sm-offset-1"><a href="/14" class="questions"><h2>9</h2></a><img src="{{ scores.13.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2 col-sm-offset-1"><a href="/15" class="questions"><h2>10</h2></a><img src="{{ scores.14.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1"><a href="/16" class="questions"><h2>11</h2></a><img src="{{ scores.15.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-primary text-center col-sm-2 col-sm-offset-1"><a href="/17" class="questions"><h2>12</h2></a><img src="{{ scores.16.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2 col-sm-offset-1"><a href="/18" class="questions"><h2>13</h2></a><img src="{{ scores.17.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2 col-sm-offset-1"><a href="/19" class="questions"><h2>14</h2></a><img src="{{ scores.18.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2 col-sm-offset-1"><a href="/20" class="questions"><h2>15</h2></a><img src="{{ scores.19.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1"><a href="/21" class="questions"><h2>16</h2></a><img src="{{ scores.20.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-primary text-center col-sm-2 col-sm-offset-1"><a href="/22" class="questions"><h2>17</h2></a><img src="{{ scores.21.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2 col-sm-offset-1"><a href="/23" class="questions"><h2>18</h2></a><img src="{{ scores.22.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2 col-sm-offset-1"><a href="/24" class="questions"><h2>19</h2></a><img src="{{ scores.23.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2 col-sm-offset-1"><a href="/25" class="questions"><h2>20</h2></a><img src="{{ scores.24.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+<tr>
+  <td class="bg-success text-center col-sm-2 col-sm-offset-1"><a href="/26" class="questions"><h2>21</h2></a><img src="{{ scores.25.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-primary text-center col-sm-2 col-sm-offset-1"><a href="/27" class="questions"><h2>22</h2></a><img src="{{ scores.26.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-warning text-center col-sm-2 col-sm-offset-1"><a href="/28" class="questions"><h2>23</h2></a><img src="{{ scores.27.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-danger text-center col-sm-2 col-sm-offset-1"><a href="/29" class="questions"><h2>24</h2></a><img src="{{ scores.28.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+  <td class="bg-info text-center col-sm-2 col-sm-offset-1"><a href="/30" class="questions"><h2>25</h2></a><img src="{{ scores.29.answered_correct_by }}" class='img-responsive img-thumbnail'></td>
+</tr>
+
+</table>

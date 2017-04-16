@@ -1,0 +1,12 @@
+{% extends "master.html" %}
+
+{% block title %}question page{% endblock %}
+
+
+{% block container %}
+
+	{% include 'includes/question_block.html' %}
+	{% include 'includes/scoring_modal.html' %}
+	{% load staticfiles %}
+    <script src="{% static 'js/question.js' %}"></script>
+{% endblock %}
